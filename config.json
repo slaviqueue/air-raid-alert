@@ -1,0 +1,6 @@
+{
+  "apiUrl": "https://emapa.fra1.cdn.digitaloceanspaces.com/statuses.json",
+  "state": "Одеська область",
+  "checkIntervalInMilliseconds": 30000,
+  "notificationRepeatTimes": 3
+}
