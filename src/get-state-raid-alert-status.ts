@@ -19,5 +19,8 @@ type RaidAlertData = {
 export async function getStateRaidAlertStatus () {
   const result = await axios.get<RaidAlertData>(config.apiUrl).then((res) => res.data)
   const stateStatus = result.states[config.state]
+
+  console.log(`date: ${new Date()}, state: ${config.state}, is alert active: ${stateStatus.enabled}`)
+
   return stateStatus
 }
