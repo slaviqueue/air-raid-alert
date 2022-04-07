@@ -1,4 +1,3 @@
 #!/bin/bash
 
-npm i
-npm start
+$(dirname "$0")/node_modules/.bin/ts-node .
