@@ -11,7 +11,7 @@ An application that runs on a raspberry to notify me about the raid alert in my 
 3. `sudo apt-get install mpg123`
 4. `npm install`
 5. `npm install -g pm2`
-6. `pm2 start start.sh`
+6. `pm2 start npm -- start`
 7. `pm2 save`
 8. `pm2 startup`
 9. Copy the last command line from `pm2 startup` output to the clipboard, then run it
