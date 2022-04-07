@@ -6,7 +6,7 @@ An application that runs on a raspberry to notify me about the raid alert in my 
 
 ## How to use
 
-1. `git clone https://github.com/slaviqueue/air-raid-alert/`
+1. `git clone https://github.com/slaviqueue/air-raid-alert`
 2. `cd air-raid-alert`
 3. `sudo apt-get install mpg123`
 4. `npm install`
