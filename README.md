@@ -14,6 +14,6 @@ An application that runs on a raspberry to notify me about the raid alert in my 
 6. `pm2 start start.sh`
 7. `pm2 save`
 8. `pm2 startup`
-9. `Copy the last command line from "pm2 startup" output to the clipboard, then run it`
+9. Copy the last command line from `pm2 startup` output to the clipboard, then run it
 10. `sudo reboot`
 11. Hope for the best
