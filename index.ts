@@ -10,18 +10,22 @@ async function main () {
   let isAlertActive = false
 
   while (true) {
-    const alertStatus = await getStateRaidAlertStatus()
-    const alertStatusChange = getAlertStatusChange(isAlertActive, alertStatus)
+    try {
+      const alertStatus = await getStateRaidAlertStatus()
+      const alertStatusChange = getAlertStatusChange(isAlertActive, alertStatus)
 
-    if (alertStatusChange === AlertStatusChange.Started) {
-      notifyAlertStarted()
-    } else if (alertStatusChange === AlertStatusChange.Finished) {
-      notifyAlertFinished()
+      if (alertStatusChange === AlertStatusChange.Started) {
+        notifyAlertStarted()
+      } else if (alertStatusChange === AlertStatusChange.Finished) {
+        notifyAlertFinished()
+      }
+
+      isAlertActive = alertStatus.enabled
+
+      await wait(config.checkIntervalInMilliseconds)
+    } catch (err) {
+      console.error({ date: new Date(), err })
     }
-
-    isAlertActive = alertStatus.enabled
-
-    await wait(config.checkIntervalInMilliseconds)
   }
 }
 
